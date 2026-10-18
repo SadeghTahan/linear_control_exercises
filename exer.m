@@ -1,0 +1,12 @@
+clear; clc; close all;
+t=-1:0.001:6;
+u= double(t>=4);
+x=5*u;
+name={'f(t)=5u(t-4)+3\delta(t-1)'};
+figure('Name','f(t)');
+plot(t,x,'linewidth', 1.5);
+hold on;
+stem(1,3,"filled",'LineWidth',2);
+xlim([-1 6]);
+ylim([0 6]);
+title(name); xlabel('t'); ylabel('f(t)'); grid on;
